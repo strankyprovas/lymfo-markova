@@ -682,6 +682,29 @@
         margin-top: 8px;
       }
 
+      /* Představení (úvod s fotkou) */
+      .intro {
+        padding-top: clamp(20px, 3vw, 40px);
+      }
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: clamp(32px, 5vw, 70px);
+        align-items: center;
+      }
+      .intro-img {
+        border-radius: 3px;
+        overflow: hidden;
+        background: var(--mist);
+        aspect-ratio: 4 / 5;
+        box-shadow: 0 24px 50px rgba(22, 48, 43, 0.1);
+      }
+      .intro-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
       /* O mně */
       .about {
         display: grid;
@@ -826,9 +849,13 @@
         .hero-grid,
         .lymph-grid,
         .about,
+        .intro-grid,
         .contact-grid,
         .warn {
           grid-template-columns: 1fr;
+        }
+        .intro-img {
+          max-width: 340px;
         }
         .flow {
           order: -1;
@@ -1001,6 +1028,42 @@
               Lymfa proudí vždy jedním směrem — vzhůru ke klíční kosti.
               Drenáž kopíruje tuto cestu.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PŘEDSTAVENÍ (úvod s fotkou majitelky) -->
+    <section class="section intro" id="predstaveni">
+      <div class="wrap intro-grid">
+        <!-- ⚠️ PLACEHOLDER FOTKA – Hana dodá kvalitní portrét -->
+        <div class="intro-img" data-reveal>
+          <img
+            src="images/hana.jpg"
+            alt="Hana Marková, majitelka studia AXON-fit v Brně-Přízřenicích"
+            loading="lazy"
+          />
+        </div>
+        <div data-reveal style="--d: 120ms">
+          <p class="eyebrow">Vítá vás</p>
+          <h2>Jmenuji se Hana Marková</h2>
+          <div class="body-copy" style="margin-top: 22px">
+            <p>
+              Ve svém studiu <strong>AXON-fit</strong> v Brně-Přízřenicích
+              pomáhám lidem cítit se ve svém těle lehčeji — pomocí
+              <strong>přístrojové lymfodrenáže</strong>. Nepracuji ve
+              spěchu a nikdy nemám v místnosti dvě klientky najednou.
+            </p>
+            <p>
+              Zakládám si na individuálním přístupu, příjemné atmosféře
+              a klidu. Věřím, že lidé si mnohem raději dopřejí péči
+              od konkrétního člověka, kterého znají — proto jsem tu
+              osobně u každého ošetření.
+            </p>
+          </div>
+          <div class="hero-actions" style="margin-top: 30px">
+            <a href="tel:+420607736012" class="btn">Objednat se</a>
+            <a href="#o-mne" class="btn btn-ghost">Více o mně</a>
           </div>
         </div>
       </div>
@@ -1393,8 +1456,8 @@
       <div class="wrap about">
         <div class="about-img" data-reveal>
           <img
-            src="images/hana.jpg"
-            alt="Hana Marková ve svém studiu v Brně-Přízřenicích"
+            src="images/studio.jpg"
+            alt="Studio AXON-fit v Brně-Přízřenicích"
             loading="lazy"
           />
         </div>
