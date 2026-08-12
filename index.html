@@ -703,6 +703,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        /* portrét je na výšku a obličej je v horní části – bez posunu by se
+           při ořezu na 4:5 uřízlo čelo */
+        object-position: center top;
       }
 
       /* O mně */
@@ -1036,7 +1039,7 @@
     <!-- PŘEDSTAVENÍ (úvod s fotkou majitelky) -->
     <section class="section intro" id="predstaveni">
       <div class="wrap intro-grid">
-        <!-- ⚠️ PLACEHOLDER FOTKA – Hana dodá kvalitní portrét -->
+        <!-- Portrét od Hany (11. 8. 2026). Až bude focení ve studiu, vyměnit. -->
         <div class="intro-img" data-reveal>
           <img
             src="images/hana.jpg"
