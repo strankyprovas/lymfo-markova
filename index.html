@@ -331,8 +331,8 @@
         stroke: var(--jade);
         stroke-width: 2.2;
         stroke-linecap: round;
-        stroke-dasharray: 18 188;
-        animation: flowUp 5.5s linear infinite;
+        stroke-dasharray: 9 91;
+        animation: flowMove 5.5s linear infinite;
       }
       .flow-move.d2 {
         animation-delay: -1.4s;
@@ -343,9 +343,9 @@
       .flow-move.d4 {
         animation-delay: -4.1s;
       }
-      @keyframes flowUp {
+      @keyframes flowMove {
         from {
-          stroke-dashoffset: 206;
+          stroke-dashoffset: 100;
         }
         to {
           stroke-dashoffset: 0;
@@ -951,7 +951,7 @@
         <!-- SIGNATURE: schéma lymfatického toku -->
         <div class="flow" data-reveal style="--d: 200ms">
           <div>
-            <svg viewBox="0 0 250 400" role="img" aria-label="Schéma toku lymfy v těle: od nohou a paží vzhůru ke sběrným uzlinám u klíční kosti">
+            <svg viewBox="0 0 250 400" role="img" aria-label="Schéma toku lymfy v těle: od nohou vzhůru a od klíční kosti i ramen dolů, vždy ke sběrným uzlinám v břiše">
               <!-- silueta -->
               <g class="flow-body">
                 <circle cx="118" cy="38" r="18" />
@@ -965,34 +965,20 @@
                 <path d="M130 178c2 34 4 62 2 92-1 26-2 48-2 62" />
               </g>
 
-              <!-- lymfatické cesty -->
+              <!-- lymfatické cesty: vše míří k břišní uzlině -->
               <g class="flow-vessel">
-                <path d="M104 332c0-14-1-36-2-62-2-30 0-58 2-92" />
-                <path d="M132 332c0-14 1-36 2-62 2-30 0-58-2-92" />
-                <path d="M70 167c0-6 1-14 3-25 5-28 12-52 23-60" />
-                <path d="M166 167c0-6-1-14-3-25-5-28-12-52-23-60" />
-                <path d="M110 176c-1-30 0-56 2-76" />
-                <path d="M126 176c1-30 0-56-2-76" />
+                <path d="M104 330 C102 288 104 226 108 190 C110 172 113 158 118 148" />
+                <path d="M132 330 C134 288 132 226 128 190 C126 172 123 158 118 148" />
+                <path d="M98 86 C102 106 108 128 118 148" />
+                <path d="M138 86 C134 106 128 128 118 148" />
               </g>
 
-              <!-- putující lymfa -->
+              <!-- putující lymfa: nohy vzhůru, klíční kost a ramena dolů — vždy k břichu -->
               <g>
-                <path
-                  class="flow-move"
-                  d="M104 332c0-14-1-36-2-62-2-30 0-58 2-92 1-14 3-24 6-32"
-                />
-                <path
-                  class="flow-move d2"
-                  d="M132 332c0-14 1-36 2-62 2-30 0-58-2-92-1-14-3-24-6-32"
-                />
-                <path
-                  class="flow-move d3"
-                  d="M70 167c0-6 1-14 3-25 5-28 12-52 23-60 5-4 10-6 15-7"
-                />
-                <path
-                  class="flow-move d4"
-                  d="M166 167c0-6-1-14-3-25-5-28-12-52-23-60-5-4-10-6-15-7"
-                />
+                <path class="flow-move" pathLength="100" d="M104 330 C102 288 104 226 108 190 C110 172 113 158 118 148" />
+                <path class="flow-move d2" pathLength="100" d="M132 330 C134 288 132 226 128 190 C126 172 123 158 118 148" />
+                <path class="flow-move d3" pathLength="100" d="M98 86 C102 106 108 128 118 148" />
+                <path class="flow-move d4" pathLength="100" d="M138 86 C134 106 128 128 118 148" />
               </g>
 
               <!-- uzliny -->
@@ -1002,28 +988,32 @@
                 <circle class="flow-node" cx="108" cy="76" r="3" />
                 <circle class="flow-node" cx="128" cy="76" r="3" />
 
-                <circle class="flow-node-halo p3" cx="142" cy="96" r="5" />
                 <circle class="flow-node" cx="94" cy="96" r="2.6" />
                 <circle class="flow-node" cx="142" cy="96" r="2.6" />
 
-                <circle class="flow-node" cx="110" cy="174" r="2.6" />
-                <circle class="flow-node" cx="126" cy="174" r="2.6" />
+                <circle class="flow-node-halo p3" cx="118" cy="148" r="5.5" />
+                <circle class="flow-node" cx="118" cy="148" r="3.4" />
 
-                <circle class="flow-node" cx="103" cy="268" r="2.3" />
-                <circle class="flow-node" cx="133" cy="268" r="2.3" />
+                <circle class="flow-node" cx="111" cy="188" r="2.4" />
+                <circle class="flow-node" cx="125" cy="188" r="2.4" />
+
+                <circle class="flow-node" cx="104" cy="268" r="2.3" />
+                <circle class="flow-node" cx="132" cy="268" r="2.3" />
               </g>
 
               <!-- popisky s vodicími linkami -->
               <g stroke="rgba(63,110,96,.45)" stroke-width=".8">
                 <path d="M131 74h44" />
                 <path d="M145 96h30" />
-                <path d="M129 174h46" />
-                <path d="M136 268h39" />
+                <path d="M133 148h42" />
+                <path d="M127 188h48" />
+                <path d="M135 268h40" />
               </g>
               <g class="flow-label">
-                <text x="179" y="76">sběrné uzliny</text>
+                <text x="179" y="76">klíční kost</text>
                 <text x="179" y="98">podpaží</text>
-                <text x="179" y="176">třísla</text>
+                <text x="179" y="150">břicho</text>
+                <text x="179" y="190">třísla</text>
                 <text x="179" y="270">podkolenní</text>
               </g>
             </svg>
