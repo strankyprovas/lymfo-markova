@@ -563,6 +563,8 @@
       .shots {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        width: min(100% , 1240px);
+        margin-inline: auto;
         gap: clamp(14px, 2vw, 22px);
         margin-top: clamp(40px, 5vw, 64px);
       }
@@ -1499,7 +1501,7 @@
 
     <!-- STUDIO -->
     <section class="section" id="studio">
-      <div class="wrap">
+      <div class="wrap" style="width: min(100% - 40px, 1320px)">
         <div class="sec-head" data-reveal>
           <p class="eyebrow">Studio</p>
           <h2>Kam přijdete</h2>
@@ -1513,7 +1515,7 @@
             <img src="images/studio-hana.jpg" alt="Hana Marková nasazuje návleky klientce ve studiu AXON-fit" loading="lazy" />
           </figure>
           <figure data-reveal style="--d: 80ms">
-            <img src="images/atmosfera.jpg" alt="Tlumené světlo a závěsy ve studiu" loading="lazy" />
+            <img src="images/studio-navleky.jpg" alt="Klientka při přístrojové lymfodrenáži v návlecích BTL" loading="lazy" />
           </figure>
           <figure data-reveal style="--d: 160ms">
             <img src="images/caj.jpg" alt="Bylinkový čaj podávaný po proceduře" loading="lazy" />
