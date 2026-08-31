@@ -571,6 +571,14 @@
       .shots figure {
         margin: 0;
       }
+      #studio .shots {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @media (max-width: 940px) {
+        #studio .shots {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
       .shots img {
         width: 100%;
         aspect-ratio: 4 / 5;
@@ -1518,6 +1526,9 @@
             <img src="images/studio-navleky.jpg" alt="Klientka při přístrojové lymfodrenáži v návlecích BTL" loading="lazy" />
           </figure>
           <figure data-reveal style="--d: 160ms">
+            <img src="images/studio-mistnost.jpg" alt="Místnost studia s lehátkem, zrcadlem a květinami" loading="lazy" />
+          </figure>
+          <figure data-reveal style="--d: 240ms">
             <img src="images/caj.jpg" alt="Bylinkový čaj podávaný po proceduře" loading="lazy" />
           </figure>
         </div>
